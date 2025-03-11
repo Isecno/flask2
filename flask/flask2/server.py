@@ -13,6 +13,10 @@ def index(word):
 def training(prof):
     return render_template('training.html', prof=prof, title="test")
 
+@app.route("/list_prof/<list>")
+def list_prof(list):
+    return render_template('list_prof.html', param=list)
+
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')

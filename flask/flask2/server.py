@@ -8,6 +8,7 @@ app = Flask(__name__)
 def index(word):
     return render_template('base.html', title=word)
 
+
 @app.route('/training/<prof>')
 def training(prof):
     return render_template('training.html', prof=prof, title="test")
